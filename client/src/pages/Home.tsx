@@ -28,7 +28,7 @@ export default function Home() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">{APP_TITLE}</h1>
-          <p className="text-lg text-gray-600">GitHubコンフリクト体験演習</p>
+          <p className="text-lg text-gray-600">GitHubコンフリクト体験演習_タイトル変更1</p>
         </div>
 
         {/* Main Card */}
