@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+// Button removed: message updates on input change, so explicit generate button is unnecessary
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { APP_TITLE } from "@/const";
 import { useEffect, useState } from "react";
@@ -57,13 +57,7 @@ export default function Home() {
               />
             </div>
 
-            {/* Button */}
-            <Button
-              onClick={handleGenerateMessage}
-              className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-2 rounded-lg transition"
-            >
-              メッセージを生成
-            </Button>
+            {/* ボタンは削除されました: 入力変更でメッセージが自動更新されます */}
           </CardContent>
         </Card>
 
@@ -79,7 +73,7 @@ export default function Home() {
                   {message}
                 </p>
               </div>
-              <p className="text-sm text-gray-500 mt-4">
+              <p className="text-sm text-gray-500 mt-4 mb-6">
                 このメッセージはJavaScriptプログラム（main.js）から生成されています。
               </p>
             </CardContent>
