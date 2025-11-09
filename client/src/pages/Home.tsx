@@ -1,5 +1,11 @@
 // Button removed: message updates on input change, so explicit generate button is unnecessary
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { APP_TITLE } from "@/const";
 import { useEffect, useState } from "react";
 
@@ -20,10 +26,7 @@ export default function Home() {
     setMessage(generatedMessage);
   }, [userName]);
 
-  const handleGenerateMessage = () => {
-    const generatedMessage = createMessage(userName);
-    setMessage(generatedMessage);
-  };
+  // 明示的な生成ボタンは削除したため、個別のハンドラは不要です
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col items-center justify-center p-4">
@@ -51,7 +54,7 @@ export default function Home() {
               <input
                 type="text"
                 value={userName}
-                onChange={(e) => setUserName(e.target.value)}
+                onChange={e => setUserName(e.target.value)}
                 placeholder="GitHub User"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
               />
@@ -65,7 +68,9 @@ export default function Home() {
         {message && (
           <Card className="shadow-lg border-0 bg-white">
             <CardHeader className="bg-green-50 border-b border-green-200 rounded-t-lg">
-              <CardTitle className="text-green-700">生成されたメッセージ</CardTitle>
+              <CardTitle className="text-green-700">
+                生成されたメッセージ
+              </CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
               <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-green-500">
